@@ -1,0 +1,17 @@
+/* App.css */
+.App {
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+input {
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px;
+  cursor: pointer;
+}

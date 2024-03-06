@@ -9,7 +9,7 @@ given location. The front-end should be developed using React.js, and the back-e
 be built with Node.js. Integrate with a free weather API for fetching weather data.
 
 
-# Front-end Addition:
+# Front-end Addition🎨
 
 1. Created a React component for displaying weather information.
 2. Implemented a form for users to input a location (city or coordinates).
@@ -39,7 +39,7 @@ location.
 3. Allow users to save their favorite locations and view the weather for those locations.
 4. Added a loading indicator while fetching weather data.
 
-# Technologies Used
+# Technologies Used⚒️
 
 1. NodeJS
 2. API Integration

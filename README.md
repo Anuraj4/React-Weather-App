@@ -43,6 +43,10 @@ location.
 3. HTML, CSS, JavaScript
 4. ReactJS
 
+# API INFO
+
+Method: GET
+URL: https://api.openweathermap.org/data/2.5/weather?q={CITY_NAME}&appid={API_KEY}
 
 
 

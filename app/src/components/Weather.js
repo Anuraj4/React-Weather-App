@@ -128,6 +128,7 @@ const Weather = () => {
           Get Weather
         </button>
       </div>
+      
 
       {weatherData && (
         <div className="mt-4">
@@ -164,7 +165,7 @@ const Weather = () => {
           {showForecast ? 'Hide Forecast' : 'Show 5-Day Forecast'}
         </button>
       </div>
-
+      {loading && <p className="text-center mt-3">Loading...</p>}
       {!loading && (
         <div className="mt-4">
           <h3 className="text-center">Favorite Locations</h3>

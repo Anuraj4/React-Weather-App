@@ -6,13 +6,16 @@ import './Weather.css';
 const Weather = () => {
   const [city, setCity] = useState('');
   const [weatherData, setWeatherData] = useState(null);
+  const [forecastData, setForecastData] = useState(null);
   const [isCelsius, setIsCelsius] = useState(false);
   const [loading, setLoading] = useState(true);
   const [favoriteLocations, setFavoriteLocations] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState('');
+  const [showForecast, setShowForecast] = useState(false);
 
   const API_KEY = 'd2c3eb4dafca8e344f7259c8d93fe813';
   const API_URL = `https://api.openweathermap.org/data/2.5/weather`;
+  const FORECAST_API_URL = `https://api.openweathermap.org/data/2.5/forecast`;
 
   useEffect(() => {
     const storedLocations = JSON.parse(localStorage.getItem('favoriteLocations')) || [];
@@ -23,8 +26,9 @@ const Weather = () => {
     if (selectedLocation) {
       setLoading(true);
       getWeatherData(selectedLocation);
+      getForecastData(selectedLocation);
     } else {
-      fetchWeatherByGeolocation(); // Fetch weather data using geolocation if no location selected
+      fetchWeatherByGeolocation(); // Fetch weather data using geolocation if no specific location is selected
     }
   }, [selectedLocation]);
 
@@ -36,6 +40,15 @@ const Weather = () => {
     } catch (error) {
       console.error('Error fetching weather data:', error);
       setLoading(false);
+    }
+  };
+
+  const getForecastData = async (location) => {
+    try {
+      const response = await axios.get(`${FORECAST_API_URL}?q=${location}&appid=${API_KEY}`);
+      setForecastData(response.data);
+    } catch (error) {
+      console.error('Error fetching forecast data:', error);
     }
   };
 
@@ -130,10 +143,32 @@ const Weather = () => {
         </div>
       )}
 
+      {showForecast && forecastData && (
+        <div className="mt-4">
+          <h3 className="text-center">5-Day Forecast</h3>
+          <div className="d-flex justify-content-center">
+            <ul>
+              {forecastData.list.slice(0, 5).map((item) => (
+                <li key={item.dt}>
+                  {new Date(item.dt * 1000).toLocaleDateString('en-US', { weekday: 'short' })}:{' '}
+                  {item.main.temp.toFixed(2)} {isCelsius ? '°C' : 'K'}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+
+      <div className="mt-3 d-flex justify-content-center">
+        <button className="btn btn-info" onClick={() => setShowForecast(!showForecast)}>
+          {showForecast ? 'Hide Forecast' : 'Show 5-Day Forecast'}
+        </button>
+      </div>
+
       {!loading && (
         <div className="mt-4">
           <h3 className="text-center">Favorite Locations</h3>
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-center" id='fav'>
             <select
               className="form-control"
               value={selectedLocation}

@@ -48,6 +48,10 @@ location.
 Method: GET
 URL: https://api.openweathermap.org/data/2.5/weather?q={CITY_NAME}&appid={API_KEY}
 
+# AUTHOR
+
+Touch with me:- https://www.instagram.com/a_n_u_r_a_j_70/
+
 
 
    

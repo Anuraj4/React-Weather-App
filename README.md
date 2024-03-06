@@ -11,12 +11,17 @@ location.
 6. You can use an existing
 
 
+
+
 Additional Consideration:
 
 1. Used React hooks for state management.
 2. Used a functional component approach in React.
 3. Ensure the code is modular and well-organized.
 4. Implemented basic validation for user inputs.
+
+
+
 
 Features:
 

@@ -1,3 +1,6 @@
+![image](https://github.com/Anuraj4/React-Weather-App/assets/88710429/90d5bc0b-eb5c-401f-8100-3c4a4525c437)
+
+
 # React-Weather-App
 Description:
 

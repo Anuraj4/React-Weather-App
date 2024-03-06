@@ -1,4 +1,10 @@
 # React-Weather-App
+Description:
+
+Build a weather application that allows users to check the current weather and forecast for a
+given location. The front-end should be developed using React.js, and the back-end API should
+be built with Node.js. Integrate with a free weather API for fetching weather data.
+
 
 Front-end Addition:
 

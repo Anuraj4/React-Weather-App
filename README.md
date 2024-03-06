@@ -1,5 +1,16 @@
 # React-Weather-App
 
+Front-end Addition:
+
+1. Created a React component for displaying weather information.
+2. Implemented a form for users to input a location (city or coordinates).
+3. Display the current weather information (temperature, description, etc.) for the provided
+location.
+4. Provided a 5-day weather forecast for the location.
+5. Used appropriate styling to enhance the user interface.
+6. You can use an existing
+
+
 Additional Consideration:
 
 1. Used React hooks for state management.

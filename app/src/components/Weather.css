@@ -22,6 +22,48 @@
     justify-content: center;
 
 }
-#fav .form-control{
-    ;
-}
+/* Weather.css */
+
+/* Default styles for larger screens */
+.container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+  }
+  
+  /* Responsive styles for medium-sized screens (e.g., tablets) */
+  @media only screen and (max-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  
+    /* Add more specific styles as needed for medium-sized screens */
+  }
+  
+  /* Responsive styles for smaller screens (e.g., mobile devices) */
+  @media only screen and (max-width: 768px) {
+    .container {
+      max-width: 500px;
+    }
+  
+    .narrow-input {
+      width: 100%; /* Make the input full width */
+    }
+  
+    .btn {
+      display: block; /* Make the button a block element */
+      width: 100%; /* Make the button full width */
+      margin-top: 10px; /* Adjust margin as needed */
+    }
+  }
+  
+  /* Additional media queries for even smaller screens if needed */
+  @media only screen and (max-width: 576px) {
+    .container {
+      max-width: 480px;
+      
+      /* margin: 20px auto; */
+    }
+  
+    /* Add more specific styles as needed for even smaller screens */
+  }
+  

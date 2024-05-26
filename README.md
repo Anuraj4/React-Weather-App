@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<< HEAD
 # React-Weather-App
 
 =======

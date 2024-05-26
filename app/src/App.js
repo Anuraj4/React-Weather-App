@@ -1,7 +1,7 @@
 // App.js
 import React from 'react';
 import Weather from './components/Weather';
-import backgroundImage from './images/bg.jpg';
+import backgroundImage from './images/bg1.png';
 
 function App() {
   const appStyles = {

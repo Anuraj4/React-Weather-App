@@ -176,7 +176,7 @@ const Weather = () => {
               value={selectedLocation}
               onChange={(e) => setSelectedLocation(e.target.value)}
             >
-              <option value="" disabled>
+              <option value="" disabled >
                 Select a favorite location
               </option>
               {favoriteLocations.map((location) => (

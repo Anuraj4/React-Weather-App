@@ -115,7 +115,7 @@ const Weather = () => {
 
   return (
     <div className="container mt-5">
-      <h1 className="text-center">Weather App</h1>
+      <h2 className="text-center">Weather App</h2>
 
       <div className="d-flex justify-content-center align-items-center mt-3">
         <input

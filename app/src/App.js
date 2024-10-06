@@ -1,16 +1,15 @@
 // App.js
 import React from 'react';
 import Weather from './components/Weather';
-import backgroundImage from './images/bg1.png';
 
 function App() {
   const appStyles = {
-    backgroundImage: `url(${backgroundImage})`, // Set the background image
-    backgroundSize: 'cover', // Cover the entire container
     minHeight: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#f4f7fa', // Soft background color for contrast
+    padding: '20px', // Add some padding for mobile responsiveness
   };
   
   return (

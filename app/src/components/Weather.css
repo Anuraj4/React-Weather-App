@@ -1,132 +1,232 @@
-
-@keyframes lights {
-  0% {
-    color: hsl(230, 40%, 80%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.2),
-      0 0 0.125em hsla(320, 100%, 60%, 0.3),
-      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
-      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
-  }
-  
-  30% { 
-    color: hsl(230, 80%, 90%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 60%, 0.5),
-      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
-      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
-  }
-  
-  40% { 
-    color: hsl(230, 100%, 95%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 90%, 0.5),
-      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
-      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
-  }
-  
-  70% {
-    color: hsl(230, 80%, 90%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 60%, 0.5),
-      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
-      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
-  }
-  
-  100% {
-    color: hsl(230, 40%, 80%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.2),
-      0 0 0.125em hsla(320, 100%, 60%, 0.3),
-      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
-      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
-  }
-  
+/* Weather.css */
+.container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  font-family: 'Arial', sans-serif;
 }
 
 .text-center {
-  color: rgb(255, 255, 255);
-  font-weight: 200;
-  margin: auto;
-  font-size: 3.5rem;
-  animation: lights 5s 750ms linear infinite;
-
-
-
-}
-
-
-#temp {
-  color: rgb(247, 244, 244);
-  font-size: 25px;
-
-
-}
-
-.narrow-input {
-  width: 400px;
-  /* Adjust the width as needed */
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #333;
 }
 
 .form-control {
-  width: 400px;
-  /* Adjust the width as needed */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
 }
 
-#convert {
-  align-items: center;
-  justify-content: center;
-
+.narrow-input {
+  max-width: 300px;
 }
 
-/* Weather.css */
-
-/* Default styles for larger screens */
-.container {
-  max-width: 1200px;
-  /* Adjust as needed */
-  margin: 0 auto;
+.btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
-/* Responsive styles for medium-sized screens (e.g., tablets) */
-@media only screen and (max-width: 992px) {
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+#fav select {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#temp {
+  font-size: 1.4em;
+  color: #007bff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+h3 {
+  color: #555;
+}
+
+@media (max-width: 600px) {
   .container {
-    max-width: 960px;
+    padding: 20px;
   }
 
-  /* Add more specific styles as needed for medium-sized screens */
-}
+  .text-center {
+    font-size: 1.4em;
+  }
 
-/* Responsive styles for smaller screens (e.g., mobile devices) */
-@media only screen and (max-width: 768px) {
-  .container {
-    max-width: 500px;
+  .btn {
+    width: 100%;
+    padding: 10px;
   }
 
   .narrow-input {
     width: 100%;
-    /* Make the input full width */
   }
 
-  .btn {
-    display: block;
-    /* Make the button a block element */
+  #fav select {
     width: 100%;
-    /* Make the button full width */
-    margin-top: 10px;
-    /* Adjust margin as needed */
   }
 }
 
-/* Additional media queries for even smaller screens if needed */
-@media only screen and (max-width: 576px) {
+/* General Styles */
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Media Queries */
+
+/* Small devices (phones, 600px and below) */
+@media only screen and (max-width: 600px) {
   .container {
-    max-width: 480px;
-    /* margin: 20px auto; */
+    padding: 10px;
   }
 
-  /* Add more specific styles as needed for even smaller screens */
+  input.form-control.narrow-input {
+    width: 100%;
+    /* Full width on small devices */
+    margin-bottom: 10px;
+    /* Add spacing for mobile */
+  }
+
+  .btn {
+    width: 100%;
+    /* Full width buttons on mobile */
+  }
+
+  ul {
+    padding-left: 0;
+    /* Remove default padding */
+  }
+
+  li {
+    font-size: 14px;
+  }
+}
+
+/* Medium devices (tablets, 600px - 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  input.form-control.narrow-input {
+    width: 80%;
+    /* Slightly narrower input field */
+  }
+
+  .btn {
+    width: 80%;
+    /* Adjust button width */
+  }
+
+  ul li {
+    font-size: 16px;
+    /* Slightly larger text for better readability */
+  }
+}
+
+/* Large devices (laptops/desktops, 768px and above) */
+@media only screen and (min-width: 769px) {
+  input.form-control.narrow-input {
+    width: 60%;
+    /* Wider input on larger screens */
+  }
+
+  .btn {
+    width: auto;
+    /* Standard button width on large screens */
+  }
+
+  ul li {
+    font-size: 18px;
+    /* Larger text size for large screens */
+  }
+
+  h2,
+  h4 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.2em;
+    /* Increase paragraph font size */
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and above) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+    /* Limit the width of the content on large screens */
+    margin: 0 auto;
+    /* Center the container */
+  }
+
+  input.form-control.narrow-input {
+    width: 50%;
+    /* Even narrower input field */
+  }
+
+  ul li {
+    font-size: 20px;
+    /* Increase text size further */
+  }
+
+  h2,
+  h4 {
+    font-size: 2.5em;
+    /* Larger heading text */
+  }
+
+  p {
+    font-size: 1.5em;
+    /* Larger paragraph text */
+  }
 }

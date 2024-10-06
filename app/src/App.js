@@ -8,7 +8,7 @@ function App() {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f4f7fa', // Soft background color for contrast
+    // backgroundColor: '#f4f7fa', // Soft background color for contrast
     padding: '20px', // Add some padding for mobile responsiveness
   };
   

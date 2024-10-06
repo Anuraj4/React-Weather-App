@@ -1,4 +1,7 @@
 /* Weather.css */
+body{
+  background-color: #504f4f;
+}
 .container {
   background-color: white;
   border-radius: 8px;

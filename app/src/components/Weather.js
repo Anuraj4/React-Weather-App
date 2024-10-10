@@ -12,7 +12,7 @@ const Weather = () => {
   const [selectedLocation, setSelectedLocation] = useState('');
   const [showForecast, setShowForecast] = useState(false);
   const [originalTemp, setOriginalTemp] = useState(null); // Store the original temperature
-
+// API for fetching 
   const API_KEY = 'd2c3eb4dafca8e344f7259c8d93fe813';
   const API_URL = `https://api.openweathermap.org/data/2.5/weather`;
   const FORECAST_API_URL = `https://api.openweathermap.org/data/2.5/forecast`;
